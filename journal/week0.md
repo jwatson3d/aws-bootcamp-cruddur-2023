@@ -25,3 +25,15 @@ I created a new domain name for this course, using the cheapest option that cost
 ### Create a DNS Name
 
 ![DNS Name](assets/crudder-wk0-dns.png)
+
+### Create Napkin Sketch of Logical Design
+
+I used Microsoft Whiteboard on my iPad to sketch this out quickly
+
+![Napkin Sketch](assets/ACPB%20-%20Week%200%20-%20Napkin%20Sketch.png)
+
+
+### Recreate Logical Architecture Design
+
+![Logical Arch Design](assets/ACPB%20-%20Week%200%20-%20Arch%20and%20Bill.png)
+
