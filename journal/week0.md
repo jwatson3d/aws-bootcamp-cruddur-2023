@@ -36,4 +36,5 @@ I used Microsoft Whiteboard on my iPad to sketch this out quickly
 ### Recreate Logical Architecture Design
 
 ![Logical Arch Design](assets/ACPB%20-%20Week%200%20-%20Arch%20and%20Bill.png)
+[Original LucidChart Diagram](https://lucid.app/lucidchart/e4cc7951-7b8b-4664-ae0d-55eadd8c999b/edit?viewport_loc=105%2C36%2C1257%2C1131%2C0_0&invitationId=inv_03171ca6-e840-44a1-b4e6-e91a35f57989)
 
