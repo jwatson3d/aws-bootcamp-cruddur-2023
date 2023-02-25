@@ -59,10 +59,20 @@ This time it works!
 
 ![docker compose up](assets/crudder-wk1-compose-up.png)  
 
-### Browse front-end website with docker compose
+### Front-end website with docker compose
 
-![browse fron-end](assets/crudder-wk1-fe-composeup-site.png)
+![browse front-end](assets/crudder-wk1-fe-composeup-site.png)
 
-### Confirm running containers and images
+### Confirm running containers and images (incl. databases)
 
 ![docker cli](assets/crudder-wk1-docker-cli.png)
+
+![docker containers](assets/crudder-wk1-containers.png)
+
+### Front-end website with notifications
+
+![front-end notifications](assets/crudder-wk1-fe-notifications.png)
+
+### Open API - Notifications
+
+![open-api](assets/crudder-wk1-openapi.png)
