@@ -5,6 +5,7 @@ WORKDIR /backend-flask
 
 # copy requirements from host to container
 COPY requirements.txt requirements.txt
+
 # install Python libraries inside container
 RUN pip3 install -r requirements.txt
 
@@ -13,6 +14,7 @@ RUN pip3 install -r requirements.txt
 COPY . .
 
 # set the env var inside the container
+ENV PORT=4567
 ENV FLASK_ENV=development
 
 EXPOSE ${PORT}
