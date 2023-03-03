@@ -78,3 +78,15 @@ Dashboard showing the trace activity
 Detail of same trace id shown above in the console
 
 ![Honey trace](assets/cruddur-wk2-dkr-honey5.png)
+
+Diagnostic test to verify Honeycomb API key
+
+![Honey diagnostic](assets/cruddur-wk2-dkr-honey6.png)
+
+Adding a trace span to HomeActivities.Run function
+
+![Honey trace](assets/cruddur-wk2-dkr-honey7.png)
+
+Adding custom attributes to Honeycomb trace
+
+![Honey trace](assets/cruddur-wk2-dkr-honey8.png)
