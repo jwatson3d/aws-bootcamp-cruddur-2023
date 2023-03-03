@@ -13,13 +13,13 @@ source .venv/bin/activate
 pyenv local 3.10.10
 ```
 
-![Python virtual environment](assets/crudder-wk1-be-venv.png)
+![Python virtual environment](assets/cruddur-wk1-be-venv.png)
 
 ### Run the backend flask site locally
 
 Browsed to [http://127.0.0.1:4567/api/activities/home](http://127.0.0.1:4567/api/activities/home) per the training video...
 
-![Run backend locally](assets/crudder-wk1-be-local.png)
+![Run backend locally](assets/cruddur-wk1-be-local.png)
 
 ### Update .gitignore
 
@@ -31,13 +31,13 @@ Used [Andrew's example code](https://github.com/omenking/aws-bootcamp-cruddur-20
 
 ### Build Docker container image
 
-![Build backend container](assets/crudder-wk1-be-docker-build-cmd.png)
+![Build backend container](assets/cruddur-wk1-be-docker-build-cmd.png)
 
 ### Run Docker container image
 
 I'm getting the same results, same 500 error that Andrew showed in this week's training...
 
-![Build backend container](assets/crudder-wk1-be-docker-run-cmd.png)
+![Build backend container](assets/cruddur-wk1-be-docker-run-cmd.png)
 
 ### Run Docker container image again with env vars
 
@@ -49,30 +49,30 @@ docker container run --rm -p 4567:4567 -e FRONTEND_URL="*" -e BACKEND_URL="*" -d
 
 This time it works!
 
-![Build backend container](assets/crudder-wk1-be-docker-run-cmd-detached-urls.png)
+![Build backend container](assets/cruddur-wk1-be-docker-run-cmd-detached-urls.png)
 
 ### Run npm install on frontend
 
-![npm install](assets/crudder-wk1-fe-npm-i.png)
+![npm install](assets/cruddur-wk1-fe-npm-i.png)
 
 ### Run Docker Compose
 
-![docker compose up](assets/crudder-wk1-compose-up.png)  
+![docker compose up](assets/cruddur-wk1-compose-up.png)  
 
 ### Front-end website with docker compose
 
-![browse front-end](assets/crudder-wk1-fe-composeup-site.png)
+![browse front-end](assets/cruddur-wk1-fe-composeup-site.png)
 
 ### Confirm running containers and images (incl. databases)
 
-![docker cli](assets/crudder-wk1-docker-cli.png)
+![docker cli](assets/cruddur-wk1-docker-cli.png)
 
-![docker containers](assets/crudder-wk1-containers.png)
+![docker containers](assets/cruddur-wk1-containers.png)
 
 ### Front-end website with notifications
 
-![front-end notifications](assets/crudder-wk1-fe-notifications.png)
+![front-end notifications](assets/cruddur-wk1-fe-notifications.png)
 
 ### Open API - Notifications
 
-![open-api](assets/crudder-wk1-openapi.png)
+![open-api](assets/cruddur-wk1-openapi.png)
