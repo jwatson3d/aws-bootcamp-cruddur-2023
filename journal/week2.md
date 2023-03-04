@@ -119,6 +119,8 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
 
 ![xray-create-group](assets/cruddur-wk2-xray-create-sampling-rule.png)
 
+### X-Ray In Action
+
 <br/>Initial run of containers produced no x-ray traces so I checked the logs and found this...
 
 ![xray-error](assets/cruddur-wk2-xray-error.png)
@@ -130,3 +132,19 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
 <br/>Here is the AWS X-Ray dashboard showing the traces
 
 ![xray-traces](assets/cruddur-wk2-xray-traces.png)
+
+## AWS CloudWatch
+
+### CloudWatch Console Output
+
+![cw-log](assets/cruddur-wk2-cw-log.png)
+
+### CloudWatch Dashboard
+
+<br/>Log streams appearing
+
+![cw-logstream](assets/cruddur-wk2-cw-logstream.png)
+
+<br/>Log events within a stream
+
+![cw-log-events](assets/cruddur-wk2-cw-log-events.png)
