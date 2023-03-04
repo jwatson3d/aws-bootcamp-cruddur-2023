@@ -148,3 +148,25 @@ aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
 <br/>Log events within a stream
 
 ![cw-log-events](assets/cruddur-wk2-cw-log-events.png)
+
+## Rollbar
+
+<br/>Hit the new Rollbar test endpoint to trigger error
+
+![rb-endpoint](assets/cruddur-wk2-rb-endpoint.png)
+
+<br/>Rollbar dashboard showing items exist under Flask
+
+![rb-dash](assets/cruddur-wk2-rb-dash.png)
+
+<br/>Rollbar items
+
+![rb-items](assets/cruddur-wk2-rb-items.png)
+
+<br/>Rollbar item detail (old UI)
+
+![rb-detail-old](assets/cruddur-wk2-rb-detail-old.png)
+
+<br/>Rollbar item detail (new UI)
+
+![rb-detail-new](assets/cruddur-wk2-rb-detail-new.png)
