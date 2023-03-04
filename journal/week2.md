@@ -1,6 +1,6 @@
 # Week 2 — Distributed Tracing
 
-## Required Homework/Tasks
+## Honeycomb
 
 ### Honeycomb Setup
 
@@ -13,7 +13,7 @@ export OTEL_SERVICE_NAME="cruddur"
 python3 -m flask run --host=0.0.0.0 --port=4567
 ```
 
-Here is the output after adding the console tracing exporter:
+<br/>Here is the output after adding the console tracing exporter:
 
 ```json
 {
@@ -59,7 +59,7 @@ Here is the output after adding the console tracing exporter:
 127.0.0.1 - - [03/Mar/2023 10:06:41] "GET /api/activities/home HTTP/1.1" 200 -
 ```
 
-I tend to prefer individual steps when doing CLI tasks so I manually ran the Docker build command again before starting the containers up. There were all kinds of errors and it took a minute to remember the code worked from the CLI so the code wasn't the problem. I then manually deleted the containers and images and built it again and it worked correctly.
+<br/>I tend to prefer individual steps when doing CLI tasks so I manually ran the Docker build command again before starting the containers up. There were all kinds of errors and it took a minute to remember the code worked from the CLI so the code wasn't the problem. I then manually deleted the containers and images and built it again and it worked correctly.
 
 ![Run backend locally](assets/cruddur-wk2-dkr-honey1.png)
 
@@ -75,18 +75,98 @@ Dashboard showing the trace activity
 
 ![Honey dashboard](assets/cruddur-wk2-dkr-honey4.png)
 
-Detail of same trace id shown above in the console
+<br/>Detail of same trace id shown above in the console
 
 ![Honey trace](assets/cruddur-wk2-dkr-honey5.png)
 
-Diagnostic test to verify Honeycomb API key
+<br/>Diagnostic test to verify Honeycomb API key
 
 ![Honey diagnostic](assets/cruddur-wk2-dkr-honey6.png)
 
-Adding a trace span to HomeActivities.Run function
+<br/>Adding a trace span to HomeActivities.Run function
 
 ![Honey trace](assets/cruddur-wk2-dkr-honey7.png)
 
-Adding custom attributes to Honeycomb trace
+<br/>Adding custom attributes to Honeycomb trace
 
 ![Honey trace](assets/cruddur-wk2-dkr-honey8.png)
+
+## AWS X-Ray
+
+### X-Ray Setup
+
+Ran the following command:
+
+```shell
+aws xray create-group --group-name "Cruddur" --filter-expression "service(\"backend-flash\")"
+```
+
+<br/>Produced the following output:
+
+![xray-create-group](assets/cruddur-wk2-xray-create-group.png)
+
+<br/>Verified in the AWS console:
+
+![xray-trace-group](assets/cruddur-wk2-xray-trace-group.png)
+
+Ran the following command:
+
+```shell
+aws xray create-sampling-rule --cli-input-json file://aws/json/xray.json
+```
+
+<br/>Produced the following output:
+
+![xray-create-group](assets/cruddur-wk2-xray-create-sampling-rule.png)
+
+### X-Ray In Action
+
+<br/>Initial run of containers produced no x-ray traces so I checked the logs and found this...
+
+![xray-error](assets/cruddur-wk2-xray-error.png)
+
+<br/>After setting and exporting my AWS credentials I reran the containers and it worked!
+
+![xray-success](assets/cruddur-wk2-xray-success.png)
+
+<br/>Here is the AWS X-Ray dashboard showing the traces
+
+![xray-traces](assets/cruddur-wk2-xray-traces.png)
+
+## AWS CloudWatch
+
+### CloudWatch Console Output
+
+![cw-log](assets/cruddur-wk2-cw-log.png)
+
+### CloudWatch Dashboard
+
+<br/>Log streams appearing
+
+![cw-logstream](assets/cruddur-wk2-cw-logstream.png)
+
+<br/>Log events within a stream
+
+![cw-log-events](assets/cruddur-wk2-cw-log-events.png)
+
+## Rollbar
+
+<br/>Hit the new Rollbar test endpoint to trigger error
+
+![rb-endpoint](assets/cruddur-wk2-rb-endpoint.png)
+
+<br/>Rollbar dashboard showing items exist under Flask
+
+![rb-dash](assets/cruddur-wk2-rb-dash.png)
+
+<br/>Rollbar items
+
+![rb-items](assets/cruddur-wk2-rb-items.png)
+
+<br/>Rollbar item detail (old UI)
+
+![rb-detail-old](assets/cruddur-wk2-rb-detail-old.png)
+
+<br/>Rollbar item detail (new UI)
+
+![rb-detail-new](assets/cruddur-wk2-rb-detail-new.png)
