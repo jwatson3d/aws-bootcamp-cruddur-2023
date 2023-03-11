@@ -53,7 +53,6 @@ export default function RecoverPage() {
     errors = <div className='errors'>{cognitoErrors}</div>;
   }
   
-
   const send_code = () => {
     return (<form 
       className='recover_form'
