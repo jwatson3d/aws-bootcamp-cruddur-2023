@@ -24,6 +24,14 @@
 
 ### AWS Cognito Set User Password CLI
 
+```shell
+aws cognito-idp admin-set-user-password \
+  --user-pool-id <your-user-pool-id> \
+  --username <username> \
+  --password <password> \
+  --permanent
+```
+
 ![set-user-pwd](assets/cruddur-wk3-set-user-pwd.png)
 
 ### AWS Cognito Login Success
