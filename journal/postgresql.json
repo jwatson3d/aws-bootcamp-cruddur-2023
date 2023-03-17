@@ -1,0 +1,99 @@
+{
+    "DBInstance": {
+        "DBInstanceIdentifier": "cruddur-db-instance",
+        "DBInstanceClass": "db.t3.micro",
+        "Engine": "postgres",
+        "DBInstanceStatus": "creating",
+        "MasterUsername": "root",
+        "DBName": "cruddur",
+        "AllocatedStorage": 20,
+        "PreferredBackupWindow": "03:40-04:10",
+        "BackupRetentionPeriod": 0,
+        "DBSecurityGroups": [],
+        "VpcSecurityGroups": [
+            {
+                "VpcSecurityGroupId": "sg-d8939bb8",
+                "Status": "active"
+            }
+        ],
+        "DBParameterGroups": [
+            {
+                "DBParameterGroupName": "default.postgres14",
+                "ParameterApplyStatus": "in-sync"
+            }
+        ],
+        "AvailabilityZone": "us-east-2a",
+        "DBSubnetGroup": {
+            "DBSubnetGroupName": "default",
+            "DBSubnetGroupDescription": "default",
+            "VpcId": "vpc-7d42ae16",
+            "SubnetGroupStatus": "Complete",
+            "Subnets": [
+                {
+                    "SubnetIdentifier": "subnet-fd511c87",
+                    "SubnetAvailabilityZone": {
+                        "Name": "us-east-2b"
+                    },
+                    "SubnetOutpost": {},
+                    "SubnetStatus": "Active"
+                },
+                {
+                    "SubnetIdentifier": "subnet-c44a5dac",
+                    "SubnetAvailabilityZone": {
+                        "Name": "us-east-2a"
+                    },
+                    "SubnetOutpost": {},
+                    "SubnetStatus": "Active"
+                },
+                {
+                    "SubnetIdentifier": "subnet-7968dd35",
+                    "SubnetAvailabilityZone": {
+                        "Name": "us-east-2c"
+                    },
+                    "SubnetOutpost": {},
+                    "SubnetStatus": "Active"
+                }
+            ]
+        },
+        "PreferredMaintenanceWindow": "mon:03:06-mon:03:36",
+        "PendingModifiedValues": {
+            "MasterUserPassword": "****"
+        },
+        "MultiAZ": false,
+        "EngineVersion": "14.6",
+        "AutoMinorVersionUpgrade": true,
+        "ReadReplicaDBInstanceIdentifiers": [],
+        "LicenseModel": "postgresql-license",
+        "OptionGroupMemberships": [
+            {
+                "OptionGroupName": "default:postgres-14",
+                "Status": "in-sync"
+            }
+        ],
+        "PubliclyAccessible": true,
+        "StorageType": "gp2",
+        "DbInstancePort": 0,
+        "StorageEncrypted": true,
+        "KmsKeyId": "arn:aws:kms:us-east-2:<AWS_ACCOUNT>:key/<KEY_ID>",
+        "DbiResourceId": "db-SDMMMP7KCLTV2HOP4GEW4JIWLE",
+        "CACertificateIdentifier": "rds-ca-2019",
+        "DomainMemberships": [],
+        "CopyTagsToSnapshot": false,
+        "MonitoringInterval": 0,
+        "DBInstanceArn": "arn:aws:rds:us-east-2:<AWS_ACCOUNT>:db:cruddur-db-instance",
+        "IAMDatabaseAuthenticationEnabled": false,
+        "PerformanceInsightsEnabled": true,
+        "PerformanceInsightsKMSKeyId": "arn:aws:kms:us-east-2:<AWS_ACCOUNT>:key/<KEY_ID>",
+        "PerformanceInsightsRetentionPeriod": 7,
+        "DeletionProtection": false,
+        "AssociatedRoles": [],
+        "TagList": [],
+        "CustomerOwnedIpEnabled": false,
+        "BackupTarget": "region",
+        "NetworkType": "IPV4",
+        "StorageThroughput": 0,
+        "CertificateDetails": {
+            "CAIdentifier": "rds-ca-2019"
+        }
+    }
+}
